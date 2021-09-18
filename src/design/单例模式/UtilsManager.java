@@ -1,6 +1,7 @@
 package design.单例模式;
 
-import com.cool.ldp.utils.SystemOutputUtils;
+
+import ldp.utils.SystemOutputUtils;
 
 public class UtilsManager {
 

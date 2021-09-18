@@ -1,6 +1,6 @@
 package design.观察者模式;
 
-import com.cool.ldp.utils.SystemOutputUtils;
+import ldp.utils.SystemOutputUtils;
 
 public class Shop2 implements Observer {
 

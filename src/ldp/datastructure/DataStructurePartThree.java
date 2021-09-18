@@ -1,12 +1,10 @@
 package ldp.datastructure;
 
-
-import ldp.utils.SystemOutputUtils;
 import com.sun.jmx.remote.internal.ArrayQueue;
+import ldp.utils.SystemOutputUtils;
 
 import java.util.ArrayDeque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * 队列   - 先进先出 后进后出
