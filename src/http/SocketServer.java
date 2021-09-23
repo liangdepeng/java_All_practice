@@ -7,6 +7,11 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * socket 服务端
+ *
+ * 对应客户端 https://github.com/liangdepeng/Android_Guide/blob/master/app/src/main/java/com/example/myapplication/socket/SocketClientActivity.java
+ */
 public class SocketServer {
     public static void main(String[] args) {
         tcpServer();
