@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class ProductPool {
     // 仓库最大容量
-    private final int MAX_SIZE = 10;
+    private static final int MAX_SIZE = 10;
     // 仓库存储
     private final LinkedList<Object> list = new LinkedList<>();
 
