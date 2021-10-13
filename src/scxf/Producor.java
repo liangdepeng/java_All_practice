@@ -23,6 +23,33 @@ public class Producor {
         cs_1.start();
         cs_2.start();
         cs_3.start();
-    }
 
+
+//        try {
+//
+//            FutureTask<String> futureTask = new FutureTask<>(new Callable<String>() {
+//                @Override
+//                public String call() throws Exception {
+//                    Thread.sleep(5000);
+//                    return "futureTask";
+//                }
+//            });
+//
+//            Thread thread = new Thread(futureTask);
+//            thread.start();
+//
+//            // futureTask.get() 得不到结果会阻塞当前线程
+//            SystemOutputUtils.println(futureTask.get());
+//
+//            SystemOutputUtils.println(1);
+//            SystemOutputUtils.println(1);
+//            SystemOutputUtils.println(1);
+//            SystemOutputUtils.println(1);
+//            SystemOutputUtils.println(1);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+    }
 }
