@@ -5,6 +5,7 @@ import ldp.utils.SystemOutputUtils;
 import java.util.HashMap;
 
 public class DguiHelper {
+
     public static void main(String[] args) {
 
         SystemOutputUtils.println("遍历  " + sum1(10));
@@ -38,7 +39,6 @@ public class DguiHelper {
 
         return fn;
     }
-
     public static int sumDiGui(int n) {
         if (n <= 1)
             return n;

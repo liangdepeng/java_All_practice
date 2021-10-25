@@ -66,7 +66,6 @@ public class TreeNodeHelper {
     public boolean isSymmetric(TreeNode root) {
         return root == null ? true : recur(root.left, root.right);
     }
-
     public boolean recur(TreeNode l, TreeNode r) {
         if (l == null && r == null)
             return true;
@@ -161,7 +160,6 @@ public class TreeNodeHelper {
             qianxu(treeNode.right);
         }
     }
-
     // 非递归先序
     public static void qianxu22(TreeNode treeNode) {
         if (treeNode == null)
@@ -200,7 +198,6 @@ public class TreeNodeHelper {
             zhongxu(treeNode.right);
         }
     }
-
     public static void zhongxu222(TreeNode treeNode) {
 
         Stack<TreeNode> nodes = new Stack<>();
@@ -257,7 +254,6 @@ public class TreeNodeHelper {
             }
         }
     }
-
     /**
      * 分组层序遍历 一次找出最大深度和宽度
      *

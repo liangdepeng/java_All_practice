@@ -6,7 +6,11 @@ import java.util.HashSet;
 
 public class ArrayHelper {
     public static void main(String[] args) {
-        SystemOutputUtils.printIntArray(exchange(new int[]{1, 3, 5}));
+       // SystemOutputUtils.printIntArray(exchange(new int[]{1, 3, 5}));
+
+        int[] ints = {1, 3, 2, 6, 7, 4, 8, 5, 9, 0};
+        sort(ints);
+        SystemOutputUtils.printIntArray(ints);
     }
 
     /**
@@ -60,7 +64,6 @@ public class ArrayHelper {
         return false;
     }
 
-
     /**
      * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
      * 输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。
@@ -95,7 +98,6 @@ public class ArrayHelper {
      * 输入：s = "We are happy."
      * 输出："We%20are%20happy."
      */
-
     public String replaceSpace(String s) {
         if (s == null)
             return "";
@@ -114,11 +116,10 @@ public class ArrayHelper {
      * 输入：nums =[1,2,3,4]
      * 输出：[1,3,2,4]
      * 注：[3,1,2,4] 也是正确的答案之一。
-     *
+     * <p>
      * 快排思想
-     *
+     * <p>
      * 前后交换
-     *
      */
     public static int[] exchange(int[] nums) {
         if (nums == null)
@@ -147,5 +148,80 @@ public class ArrayHelper {
         }
 
         return nums;
+    }
+
+    /**
+     * 0-N 长度为 N-1的数组 缺少一个数字
+     *
+     * @param nums
+     * @return
+     */
+    public static void shaoyigenum(int[] nums) {
+
+    }
+
+    public static void sort(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return;
+        }
+        quickSort(nums, 0, nums.length - 1);
+    }
+
+    // 快速排序 O( nlog(n) )
+    private static void quickSort(int[] nums, int l, int r) {
+        if (l >= r)
+            return;
+
+        int left = l, right = r;
+        int pivot = nums[left];// 左边基准就从右边开始
+
+        while (left < right) {
+
+            while (left < right && nums[right] >= pivot) {
+                right--;
+            }
+
+            if (left < right) {
+                nums[left] = nums[right];
+            }
+
+            while (left < right && nums[left] <= pivot) {
+                left++;
+            }
+
+            if (left < right) {
+                nums[right] = nums[left];
+            }
+
+        }
+
+        nums[left] = pivot;
+
+        quickSort(nums, 0, left);
+        quickSort(nums, left + 1, r);
+    }
+
+    /**二分查找O( log(n) )
+     *循环实现二分算法
+     */
+    public static int binSearch_1(int key, int[] array) {
+        int low = 0; //第一个下标
+        int high = array.length - 1;//最后一个下标
+        int middle = 0;
+        //防越界
+        if (key < array[low] || key > array[high] || low > high) {
+            return -1;
+        }
+        while (low <= high) {
+            middle = (low + high) / 2;
+            if (middle == key) {
+                return array[middle];
+            } else if (middle < key) {
+                low = middle + 1;
+            } else {
+                high = middle - 1;
+            }
+        }
+        return -1;
     }
 }

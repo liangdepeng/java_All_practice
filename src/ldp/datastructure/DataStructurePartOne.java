@@ -192,8 +192,6 @@ public class DataStructurePartOne {
         }
     }
 
-    static int count = 0;
-
     private static void quickSort(int[] array, int left, int right) {
         long mills = System.currentTimeMillis();
         if (left < right) {
